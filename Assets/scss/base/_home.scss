@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+body {
+  font-family: $ff-primary;
+  font-size: 0.9375rem;
+  line-height: 1.575rem;
+  background-color: $clr-neutral-200;
+  color: $clr-neutral-100;
+  @include flex(column, center, center);
+}
+
+.attribution {
+  margin-block: 0.5rem;
+  text-align: center;
+  color: hsl(0deg, 0%, 0%);
+}
+
+.attribution a {
+  // font-family: $ff-secondary;
+  font-weight: 700;
+  font-size: .775rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+  color: hsl(0deg, 0%, 0%);
+}
+
+@media (min-width: 56.75rem) and (min-height: 43.125rem) {
+  .attribution {
+    position: fixed;
+    bottom: 0;
+  }
+}

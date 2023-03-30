@@ -1,0 +1,25 @@
+// Font-Family 
+$ff-primary: 'Lexend Deca', sans-serif;
+$ff-secondary: 'Big Shoulders Display', 'cursive';
+
+// Colors 
+
+// Neutral Colors
+$clr-neutral-100: hsla(0, 0%, 100%, 0.75);
+$clr-neutral-200: hsl(0, 0%, 95%);
+
+// Primary Colors
+$clr-primary-400: hsl(31, 77%, 52%);
+$clr-primary-500: hsl(184, 100%, 22%);
+$clr-primary-600: hsl(179, 100%, 13%);
+
+// Transition 
+$transition: 0.3s ease-in-out;
+
+// Responsive Breakpoint 
+
+$Device-S: 375px;
+$Device-M: 615px;
+$Device-L: 906px;
+$Device-XL: 1200px;
+$Device-XXL: 1440px;

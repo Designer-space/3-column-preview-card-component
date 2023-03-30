@@ -1,0 +1,119 @@
+@use '../abstracts' as *;
+
+
+.card-wrapper{
+    max-width: 57.5rem;
+    margin: 1.3rem;
+}
+
+
+.cards{
+    border-radius: .5rem;
+    overflow: hidden;
+    @include grid_repeat(6);
+
+    .card-a{
+        --local-var-clr: hsl(31, 77%, 52%);
+        grid-area: 1 / 1 / 3 / 7;
+    }
+
+    .card-b{
+        --local-var-clr: hsl(184, 100%, 22%);
+        grid-area: 3 / 1 / 5 / 7;
+    }
+
+    .card-c{
+        --local-var-clr: hsl(179, 100%, 13%);
+        grid-area: 5 / 1 / 7 / 7;
+    }   
+
+    .card{
+        padding: 3rem;
+        @include flex(column, start, space-between);
+        gap: 2rem;
+        background-color: var(--local-var-clr);
+
+        &__image{
+            max-width: 4rem;
+        }
+
+        &__title{
+            font-size: 2.5rem;
+            font-family: $ff-secondary;
+            text-transform: uppercase;
+            color: $clr-neutral-200;
+        }
+
+        &__content{
+            color: $clr-neutral-100;
+        }
+
+        &__btn{
+            border-radius: 100px;
+            padding: .8rem 1.9rem;
+            background-color: $clr-neutral-200;
+            text-decoration: none;
+            color: var(--local-var-clr);
+            border: 2px solid $clr-neutral-200;
+            transition: $transition;
+
+            &:hover{
+                color: $clr-neutral-200;
+                background-color: var(--local-var-clr);
+            }
+        }
+    }
+
+    @include media(min-width, $Device-M){
+        .card-a{
+            grid-area: 1 / 1 / 4 / 4;
+        }
+    
+        .card-b{
+            grid-area: 1 / 4 / 4 / 7;
+        }
+    
+        .card-c{
+            grid-area: 4 / 1 / 7 / 7;
+        }
+    }
+
+    @include media(min-width, $Device-L){
+
+        .card-a{
+            grid-area: 1 / 1 / 7 / 3;
+        }
+    
+        .card-b{
+            grid-area: 1 / 3 / 7 / 5;
+        }
+    
+        .card-c{
+            grid-area: 1 / 5 / 7 / 7;
+        }
+
+    }
+}
+
+@include media(min-width, $Device-L){
+    .cards{
+        margin-top: 4rem;
+
+        .card{
+            gap: 2.5rem;
+
+            &__title{
+                margin-top: .5rem;
+            }
+
+            &__content{
+                margin-top: .025rem;
+                margin-bottom: .5rem;
+            }
+
+            &__btn{
+                margin-top: 1.4rem;
+            }
+        }
+    }
+}
